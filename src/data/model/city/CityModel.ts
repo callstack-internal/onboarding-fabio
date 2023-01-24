@@ -6,6 +6,7 @@ export interface CityModel {
   name: string;
   weather: string;
   temperature: number;
+  imageURL: string;
 }
 
 // TODO: Implement mapper when implementing API.

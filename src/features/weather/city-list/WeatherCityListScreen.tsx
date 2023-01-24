@@ -14,20 +14,23 @@ const WeatherCityListScreen = () => {
     {
       id: 'city1',
       name: 'City 1',
-      weather: '',
+      weather: 'Clear',
       temperature: 40,
+      imageURL: 'https://openweathermap.org/img/wn/01d.png',
     },
     {
       id: 'city2',
       name: 'City 2',
-      weather: '',
+      weather: 'Clouds',
       temperature: 50,
+      imageURL: 'https://openweathermap.org/img/wn/03d.png',
     },
     {
       id: 'city3',
       name: 'City 3',
-      weather: '',
+      weather: 'Rain',
       temperature: 60,
+      imageURL: 'https://openweathermap.org/img/wn/10d.png',
     },
   ];
 
