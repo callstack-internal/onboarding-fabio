@@ -9,7 +9,7 @@ import WeatherCityListItem from './WeatherCityListItem';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'WeatherCityList'>;
 
-const WeatherCityListScreen = () => {
+const WeatherCityListScreen = ({navigation}: Props) => {
   const listData: CityModel[] = [
     {
       id: 'city1',
@@ -43,7 +43,7 @@ const WeatherCityListScreen = () => {
   const renderListSeparator = () => <ListSeparator />;
 
   const onListItemPress = (item: CityModel) => {
-    // TODO: Navigate to details screen.
+    navigation.navigate('WeatherCityDetails', {city: item});
   };
 
   return (
