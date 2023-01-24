@@ -10,6 +10,7 @@ const RootStackNavigator = () => {
     <RootStack.Navigator initialRouteName={'WeatherCityList'}>
       <RootStack.Screen
         name={'WeatherCityList'}
+        options={{headerTitle: 'Weather'}}
         component={WeatherCityListScreen}
       />
     </RootStack.Navigator>
