@@ -1,6 +1,7 @@
 import React from 'react';
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
+import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
 import {CityModel} from '../../../data/model/city/CityModel';
 import Colors from '../../../styles/Colors';
 
@@ -10,29 +11,44 @@ type Props = {
 };
 
 const WeatherCityListItem = ({item, onPress}: Props) => {
+  const _onPress = () => {
+    onPress?.(item);
+  };
+
   return (
-    <SafeAreaView style={styles.rootContainer} edges={['left', 'right']}>
-      <Image
-        style={styles.image}
-        source={{uri: item.imageURL}}
-        accessibilityIgnoresInvertColors
-      />
+    <Pressable accessibilityRole={'button'} onPress={_onPress}>
+      <SafeAreaView style={styles.rootContainer} edges={['left', 'right']}>
+        <Image
+          style={styles.image}
+          source={{uri: item.imageURL}}
+          accessibilityIgnoresInvertColors
+        />
 
-      <View style={styles.detailsContainer}>
-        <Text style={styles.detailsNameLabel} numberOfLines={1}>
-          {item.name}
-        </Text>
-        <Text style={styles.detailsWeatherLabel} numberOfLines={1}>
-          {item.weather}
-        </Text>
-      </View>
+        <View style={styles.detailsContainer}>
+          <Text style={styles.detailsNameLabel} numberOfLines={1}>
+            {item.name}
+          </Text>
+          <Text style={styles.detailsWeatherLabel} numberOfLines={1}>
+            {item.weather}
+          </Text>
+        </View>
 
-      <View style={styles.chipContainer}>
-        <Text style={styles.chipLabel} numberOfLines={1}>
-          {`${item.temperature} °F`}
-        </Text>
-      </View>
-    </SafeAreaView>
+        <View style={styles.chipContainer}>
+          <Text style={styles.chipLabel} numberOfLines={1}>
+            {`${item.temperature} °F`}
+          </Text>
+        </View>
+
+        {onPress && (
+          <MaterialIcon
+            style={styles.chevronIcon}
+            name={'chevron-right'}
+            size={24}
+            color={Colors.black}
+          />
+        )}
+      </SafeAreaView>
+    </Pressable>
   );
 };
 
@@ -76,6 +92,10 @@ const styles = StyleSheet.create({
   chipLabel: {
     fontSize: 14,
     color: Colors.black,
+  },
+
+  chevronIcon: {
+    marginLeft: 10,
   },
 });
 

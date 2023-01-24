@@ -37,10 +37,14 @@ const WeatherCityListScreen = () => {
   const listKeyExtractor = (item: CityModel, _index: number) => item.id;
 
   const renderListItem = ({item}: ListRenderItemInfo<CityModel>) => {
-    return <WeatherCityListItem item={item} />;
+    return <WeatherCityListItem item={item} onPress={onListItemPress} />;
   };
 
   const renderListSeparator = () => <ListSeparator />;
+
+  const onListItemPress = (item: CityModel) => {
+    // TODO: Navigate to details screen.
+  };
 
   return (
     <FlatList
