@@ -25,7 +25,7 @@ const fetchCitiesWeather = async ({
     const axiosResponse = await client.get(endpoints.group, {
       params: {
         id: citiesIDs.join(','),
-        units: 'metric',
+        units: 'imperial',
         appid: OPEN_WEATHER_API_KEY,
       },
     });

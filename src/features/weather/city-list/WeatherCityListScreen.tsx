@@ -26,7 +26,7 @@ const WeatherCityListScreen = ({navigation}: Props) => {
   };
 
   return (
-    <FlatList
+    <FlatList<CityModel>
       style={styles.rootContainer}
       data={listData}
       keyExtractor={listKeyExtractor}
