@@ -37,7 +37,7 @@ const WeatherCityListScreen = ({navigation}: Props) => {
 
     return (
       <ListEmptyComponent
-        description={error ? 'An error occured.' : 'No data to display.'}
+        description={error ? 'An error occurred.' : 'No data to display.'}
         onTryAgainPress={fetch}
       />
     );
