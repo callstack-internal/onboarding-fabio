@@ -2,7 +2,7 @@ import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import React from 'react';
 import {FlatList, ListRenderItemInfo, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import ListSeparator from '../../../components/ListSeparator';
+import ListSeparator from '../../../components/list/ListSeparator';
 import {RootStackParamList} from '../../../navigation/types/RootStackNavigationTypes';
 import WeatherCityListItem from '../city-list/WeatherCityListItem';
 import WeatherCityDetailsInfoItem from './WeatherCityDetailsInfoItem';
@@ -29,7 +29,22 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
     return <WeatherCityDetailsInfoItem label={item.label} value={item.value} />;
   };
 
-  const renderListSeparator = () => <ListSeparator />;
+  const renderListSeparator = () => {
+    return <ListSeparator />;
+  };
+
+  const renderListHeader = () => {
+    return (
+      <>
+        <WeatherCityListItem item={city} />
+        <ListSeparator />
+      </>
+    );
+  };
+
+  const renderListFooter = () => {
+    return <SafeAreaView edges={['bottom']} />;
+  };
 
   return (
     <FlatList<ListItem>
@@ -38,13 +53,8 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
       keyExtractor={listKeyExtractor}
       renderItem={renderListItem}
       ItemSeparatorComponent={renderListSeparator}
-      ListHeaderComponent={
-        <>
-          <WeatherCityListItem item={city} />
-          <ListSeparator />
-        </>
-      }
-      ListFooterComponent={<SafeAreaView edges={['bottom']} />}
+      ListHeaderComponent={renderListHeader}
+      ListFooterComponent={renderListFooter}
     />
   );
 };
