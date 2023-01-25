@@ -4,4 +4,5 @@ module.exports = {
     'node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation|react-native-vector-icons)',
   ],
   setupFilesAfterEnv: ['./jest.setup.ts'],
+  testPathIgnorePatterns: ['./e2e'],
 };
