@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a different state correctly 1`] = `
+"Snapshot Diff:
+- <ListEmptyComponent description="Empty list." onTryAgainPress={[Function onTryAgainPress]} />
++ <ListEmptyComponent description="Another description." onTryAgainPress={[Function onTryAgainPress]} />
+
+@@ -19,11 +19,11 @@
+          "color": "#000000",
+          "fontSize": 14,
+        }
+      }
+    >
+-     Empty list.
++     Another description.
+    </Text>
+    <View
+      accessibilityRole="button"
+      accessibilityState={
+        Object {"
+`;
+
+exports[`should render correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    [
+      "left",
+      "right",
+    ]
+  }
+  style={
+    {
+      "alignItems": "center",
+      "paddingHorizontal": 20,
+      "paddingVertical": 40,
+    }
+  }
+>
+  <Text
+    style={
+      {
+        "color": "#000000",
+        "fontSize": 14,
+      }
+    }
+  >
+    Empty list.
+  </Text>
+  <View
+    accessibilityRole="button"
+    accessibilityState={
+      {
+        "busy": undefined,
+        "checked": undefined,
+        "disabled": undefined,
+        "expanded": undefined,
+        "selected": undefined,
+      }
+    }
+    accessibilityValue={
+      {
+        "max": undefined,
+        "min": undefined,
+        "now": undefined,
+        "text": undefined,
+      }
+    }
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onFocus={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "marginTop": 20,
+      }
+    }
+  >
+    <Text
+      style={
+        {
+          "color": "#5DADE2",
+          "fontSize": 14,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Try Again
+    </Text>
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "#5DADE2",
+            "fontSize": 24,
+          },
+          undefined,
+          {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+</RNCSafeAreaView>
+`;

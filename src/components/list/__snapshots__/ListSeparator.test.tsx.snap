@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<View
+  style={
+    {
+      "backgroundColor": "#D3D3D3",
+      "height": 1,
+    }
+  }
+/>
+`;

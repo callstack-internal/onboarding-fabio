@@ -15,11 +15,11 @@ export interface CityDTO {
     all: number;
   };
   name: string;
-  id: string;
+  id: number;
 }
 
 export interface CityModel {
-  id: string;
+  id: number;
   name: string;
   weather: string | undefined;
   temperature: number;

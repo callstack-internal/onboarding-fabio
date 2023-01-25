@@ -4381,7 +4381,7 @@ jest-config@^29.4.0:
     slash "^3.0.0"
     strip-json-comments "^3.1.1"
 
-jest-diff@^29.4.0:
+jest-diff@^29.0.0, jest-diff@^29.4.0:
   version "29.4.0"
   resolved "https://registry.yarnpkg.com/jest-diff/-/jest-diff-29.4.0.tgz#9c75dcef5872c8889bfcb78bc9571a0e4e9bd8f6"
   integrity sha512-s8KNvFx8YgdQ4fn2YLDQ7N6kmVOP68dUDVJrCHNsTc3UM5jcmyyFeYKL8EPWBQbJ0o0VvDGbWp8oYQ1nsnqnWw==
@@ -4594,7 +4594,7 @@ jest-serializer@^27.0.6:
     "@types/node" "*"
     graceful-fs "^4.2.9"
 
-jest-snapshot@^29.4.0:
+jest-snapshot@^29.0.0, jest-snapshot@^29.4.0:
   version "29.4.0"
   resolved "https://registry.yarnpkg.com/jest-snapshot/-/jest-snapshot-29.4.0.tgz#c839f6b84d50b917691ddf6a3cef9f0852b3d0e7"
   integrity sha512-UnK3MhdEWrQ2J6MnlKe51tvN5FjRUBQnO4m1LPlDx61or3w9+cP/U0x9eicutgunu/QzE4WC82jj6CiGIAFYzw==
@@ -6465,6 +6465,15 @@ snapdragon@^0.8.1:
     source-map "^0.5.6"
     source-map-resolve "^0.5.0"
     use "^3.1.0"
+
+snapshot-diff@^0.10.0:
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/snapshot-diff/-/snapshot-diff-0.10.0.tgz#7fe59bc647a9a0ba1b597b7cf2b45be4adc66401"
+  integrity sha512-tbThBMguEG4TQNPfYD5VDAYbmxsSnu+VQSLElWfDBdebLKqXZa14hap8LqxAwD9w8CT4dfS+Ga9+7JMmHMU98g==
+  dependencies:
+    jest-diff "^29.0.0"
+    jest-snapshot "^29.0.0"
+    pretty-format "^29.0.0"
 
 source-map-resolve@^0.5.0:
   version "0.5.3"
