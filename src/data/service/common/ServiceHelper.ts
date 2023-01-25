@@ -19,6 +19,7 @@ const processAPIResponse = <
     serviceResponse = {
       ok: apiResponse.ok,
       problem: null,
+      error: null,
       data: newData,
       apiResponseStatus: apiResponse.status,
       apiResponseHeaders: apiResponse.headers,
@@ -42,8 +43,6 @@ const processAPIResponse = <
 const processGenericServiceError = <T, U>(
   error: unknown,
 ): ServiceResponse<T, U> => {
-  console.error(error);
-
   return {
     ok: false,
     problem: 'SERVICE_ERROR',

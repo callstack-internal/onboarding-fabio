@@ -12,6 +12,7 @@ interface ServiceErrorResponse<T> {
 interface ServiceSuccessResponse<T> {
   ok: true;
   problem: null;
+  error: null;
   data: T;
   apiResponseStatus?: number;
   apiResponseHeaders?: RawAxiosResponseHeaders | AxiosResponseHeaders;
