@@ -20,7 +20,7 @@ const WeatherCityListItem = ({item, onPress}: Props) => {
       <SafeAreaView style={styles.rootContainer} edges={['left', 'right']}>
         <Image
           style={styles.image}
-          source={{uri: item.imageURL}}
+          source={{uri: item.iconURL}}
           accessibilityIgnoresInvertColors
         />
 
