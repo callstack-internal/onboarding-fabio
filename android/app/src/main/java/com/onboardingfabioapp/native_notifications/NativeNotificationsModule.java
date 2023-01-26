@@ -32,7 +32,7 @@ public class NativeNotificationsModule extends ReactContextBaseJavaModule {
                 .setSmallIcon(android.R.drawable.arrow_up_float)
                 .setContentTitle(title)
                 .setContentText(content)
-                .setPriority(NotificationCompat.PRIORITY_DEFAULT);
+                .setPriority(NotificationCompat.PRIORITY_HIGH);
 
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(getReactApplicationContext());
         notificationManager.notify(8010, builder.build());
@@ -42,7 +42,7 @@ public class NativeNotificationsModule extends ReactContextBaseJavaModule {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             CharSequence name = "Native Notifications channel";
             String description = "Fast native notifications";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
+            int importance = NotificationManager.IMPORTANCE_HIGH;
 
             NotificationChannel channel = new NotificationChannel(notificationChannelId, name, importance);
             channel.setDescription(description);
