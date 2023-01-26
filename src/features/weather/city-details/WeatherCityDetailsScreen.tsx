@@ -4,6 +4,7 @@ import {FlatList, ListRenderItemInfo, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ListSeparator from '../../../components/list/ListSeparator';
 import NativeButton from '../../../components/native-button/NativeButton';
+import NotificationService from '../../../data/service/notification/NotificationService';
 import {RootStackParamList} from '../../../navigation/types/RootStackNavigationTypes';
 import Colors from '../../../styles/Colors';
 import WeatherCityListItem from '../city-list/WeatherCityListItem';
@@ -49,7 +50,7 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
       <SafeAreaView style={styles.buttonContainer} edges={['bottom']}>
         <NativeButton
           style={styles.button}
-          text={'Native Button'}
+          text={'Show notification'}
           textColor={Colors.white}
           enabled
           onPress={onButtonPress}
@@ -59,7 +60,10 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
   };
 
   const onButtonPress = () => {
-    console.log('onButtonPress');
+    NotificationService.showNotification({
+      title: 'Weather update',
+      body: `City: ${city.name}\nConditions: ${city.weather}`,
+    });
   };
 
   return (
