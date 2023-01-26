@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render correctly 1`] = `
+<RNCSafeAreaView
+  edges={
+    [
+      "left",
+      "right",
+    ]
+  }
+  style={
+    {
+      "alignItems": "center",
+      "paddingHorizontal": 20,
+      "paddingVertical": 40,
+    }
+  }
+>
+  <ActivityIndicator
+    color="#000000"
+    size="large"
+  />
+</RNCSafeAreaView>
+`;

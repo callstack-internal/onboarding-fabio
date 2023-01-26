@@ -1,0 +1,230 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render a different state correctly 1`] = `
+"Snapshot Diff:
+- <WeatherCityListItem item={{"cloudCover": 100, "humidity": 95, "iconURL": "https://openweathermap.org/img/wn/50d.png", "id": 2988507, "name": "Paris", "pressure": 1031, "temperature": 32.47, "weather": "Mist", "windSpeed": 5.75}} />
++ <WeatherCityListItem item={{"cloudCover": 0, "humidity": 46, "iconURL": "https://openweathermap.org/img/wn/01d.png", "id": 3117735, "name": "Madrid", "pressure": 1025, "temperature": 47.44, "weather": "Clear", "windSpeed": 6.91}} onPress={[Function onPress]} />
+
+@@ -48,11 +48,11 @@
+    >
+      <Image
+        accessibilityIgnoresInvertColors={true}
+        source={
+          Object {
+-           "uri": "https://openweathermap.org/img/wn/50d.png",
++           "uri": "https://openweathermap.org/img/wn/01d.png",
+          }
+        }
+        style={
+          Object {
+            "backgroundColor": "#D3D3D3",
+@@ -77,11 +77,11 @@
+              "color": "#000000",
+              "fontSize": 14,
+            }
+          }
+        >
+-         Paris
++         Madrid
+        </Text>
+        <Text
+          numberOfLines={1}
+          style={
+            Object {
+@@ -90,11 +90,11 @@
+              "fontWeight": "bold",
+              "marginTop": 4,
+            }
+          }
+        >
+-         Mist
++         Clear
+        </Text>
+      </View>
+      <View
+        style={
+          Object {
+@@ -113,10 +113,33 @@
+              "color": "#000000",
+              "fontSize": 14,
+            }
+          }
+        >
+-         32.47 °F
++         47.44 °F
+        </Text>
+      </View>
++     <Text
++       allowFontScaling={false}
++       selectable={false}
++       style={
++         Array [
++           Object {
++             "color": "#000000",
++             "fontSize": 24,
++           },
++           Object {
++             "marginLeft": 10,
++           },
++           Object {
++             "fontFamily": "Material Icons",
++             "fontStyle": "normal",
++             "fontWeight": "normal",
++           },
++           Object {},
++         ]
++       }
++     >
++       
++     </Text>
+    </RNCSafeAreaView>
+  </View>"
+`;
+
+exports[`should render correctly 1`] = `
+<View
+  accessibilityRole="button"
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onFocus={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+>
+  <RNCSafeAreaView
+    edges={
+      [
+        "left",
+        "right",
+      ]
+    }
+    style={
+      {
+        "alignItems": "center",
+        "backgroundColor": "#FFFFFF",
+        "flexDirection": "row",
+        "padding": 20,
+      }
+    }
+  >
+    <Image
+      accessibilityIgnoresInvertColors={true}
+      source={
+        {
+          "uri": "https://openweathermap.org/img/wn/50d.png",
+        }
+      }
+      style={
+        {
+          "backgroundColor": "#D3D3D3",
+          "borderRadius": 20,
+          "height": 40,
+          "width": 40,
+        }
+      }
+    />
+    <View
+      style={
+        {
+          "flex": 1,
+          "marginHorizontal": 20,
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          {
+            "color": "#000000",
+            "fontSize": 14,
+          }
+        }
+      >
+        Paris
+      </Text>
+      <Text
+        numberOfLines={1}
+        style={
+          {
+            "color": "#808080",
+            "fontSize": 12,
+            "fontWeight": "bold",
+            "marginTop": 4,
+          }
+        }
+      >
+        Mist
+      </Text>
+    </View>
+    <View
+      style={
+        {
+          "backgroundColor": "#D3D3D3",
+          "borderRadius": 15,
+          "height": 30,
+          "paddingHorizontal": 12,
+          "paddingVertical": 6,
+        }
+      }
+    >
+      <Text
+        numberOfLines={1}
+        style={
+          {
+            "color": "#000000",
+            "fontSize": 14,
+          }
+        }
+      >
+        32.47 °F
+      </Text>
+    </View>
+    <Text
+      allowFontScaling={false}
+      selectable={false}
+      style={
+        [
+          {
+            "color": "#000000",
+            "fontSize": 24,
+          },
+          {
+            "marginLeft": 10,
+          },
+          {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          {},
+        ]
+      }
+    >
+      
+    </Text>
+  </RNCSafeAreaView>
+</View>
+`;

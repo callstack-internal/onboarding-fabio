@@ -48,6 +48,7 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
 
   return (
     <FlatList<ListItem>
+      testID={'weather-city-details-screen'}
       style={styles.rootContainer}
       data={listData}
       keyExtractor={listKeyExtractor}

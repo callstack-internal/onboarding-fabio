@@ -15,7 +15,8 @@ type Props = NativeStackScreenProps<RootStackParamList, 'WeatherCityList'>;
 const WeatherCityListScreen = ({navigation}: Props) => {
   const {data, isLoading, error, fetch} = useFetchCitiesWeather();
 
-  const listKeyExtractor = (item: CityModel, _index: number) => item.id;
+  const listKeyExtractor = (item: CityModel, _index: number) =>
+    item.id.toString();
 
   const renderListItem = ({item}: ListRenderItemInfo<CityModel>) => {
     return <WeatherCityListItem item={item} onPress={onListItemPress} />;
@@ -36,7 +37,7 @@ const WeatherCityListScreen = ({navigation}: Props) => {
 
     return (
       <ListEmptyComponent
-        description={error ? 'An error occured.' : 'No data to display.'}
+        description={error ? 'An error occurred.' : 'No data to display.'}
         onTryAgainPress={fetch}
       />
     );
@@ -48,6 +49,7 @@ const WeatherCityListScreen = ({navigation}: Props) => {
 
   return (
     <FlatList<CityModel>
+      testID={'weather-city-list-screen'}
       style={styles.rootContainer}
       data={data}
       keyExtractor={listKeyExtractor}

@@ -5,12 +5,14 @@ import {OpenWeatherGenericErrorResponseDTO} from '../../model/open-weather/OpenW
 import APIHelper from '../common/APIHelper';
 import {APIResponse} from '../common/APIResponse';
 
+const BASE_URL = 'https://api.openweathermap.org/data/2.5';
+
 const endpoints = {
   group: '/group',
 };
 
 const client = axios.create({
-  baseURL: 'https://api.openweathermap.org/data/2.5',
+  baseURL: BASE_URL,
   timeout: 30000,
 });
 
@@ -37,6 +39,8 @@ const fetchCitiesWeather = async ({
 };
 
 const OpenWeatherAPI = {
+  BASE_URL,
+  endpoints,
   fetchCitiesWeather,
 };
 

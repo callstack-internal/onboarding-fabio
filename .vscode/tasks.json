@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "lint",
+      "problemMatcher": ["$eslint-stylish"],
+      "label": "Lint ESLint"
+    },
+    {
+      "type": "npm",
+      "script": "compile-ts",
+      "problemMatcher": ["$tsc"],
+      "label": "Compile TS"
+    },
+    {
+      "label": "Check for errors in the project",
+      "dependsOn": ["Lint ESLint", "Compile TS"]
+    }
+  ]
+}
