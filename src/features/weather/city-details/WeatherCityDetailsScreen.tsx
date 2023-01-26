@@ -3,7 +3,9 @@ import React from 'react';
 import {FlatList, ListRenderItemInfo, StyleSheet} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import ListSeparator from '../../../components/list/ListSeparator';
+import NativeButton from '../../../components/native-button/NativeButton';
 import {RootStackParamList} from '../../../navigation/types/RootStackNavigationTypes';
+import Colors from '../../../styles/Colors';
 import WeatherCityListItem from '../city-list/WeatherCityListItem';
 import WeatherCityDetailsInfoItem from './WeatherCityDetailsInfoItem';
 
@@ -43,7 +45,21 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
   };
 
   const renderListFooter = () => {
-    return <SafeAreaView edges={['bottom']} />;
+    return (
+      <SafeAreaView style={styles.buttonContainer} edges={['bottom']}>
+        <NativeButton
+          style={styles.button}
+          text={'Native Button'}
+          textColor={Colors.white}
+          enabled
+          onPress={onButtonPress}
+        />
+      </SafeAreaView>
+    );
+  };
+
+  const onButtonPress = () => {
+    console.log('onButtonPress');
   };
 
   return (
@@ -63,6 +79,17 @@ const WeatherCityDetailsScreen = ({route}: Props) => {
 const styles = StyleSheet.create({
   rootContainer: {
     flex: 1,
+  },
+
+  buttonContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  button: {
+    width: '50%',
+    height: 40,
+    backgroundColor: Colors.black,
   },
 });
 
