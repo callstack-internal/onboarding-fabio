@@ -1,33 +1,33 @@
-name: [MAIN] CI
+name: '[MAIN] CI'
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ['main']
   pull_request:
-    branches: [ "main" ]
+    branches: ['main']
 
 jobs:
   build:
     runs-on: macos-latest
 
     steps:
-    - name: Checkout project
-      uses: actions/checkout@v3
+      - name: 'Checkout project'
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v3
-      with:
-        node-version: lts
-        cache: 'yarn'
+      - name: 'Setup Node.js environment'
+        uses: actions/setup-node@v3
+        with:
+          node-version: 'lts'
+          cache: 'yarn'
 
-    - name: Install dependencies
-      run: yarn install --immutable
-    
-    - name: Lint project
-      run: yarn lint
+      - name: 'Install dependencies'
+        run: yarn install --immutable
 
-    - name: Compile TS
-      run: yarn compile-ts
-      
-    - name: Run tests
-      run: yarn test
+      - name: 'Lint project'
+        run: yarn lint
+
+      - name: 'Compile TS'
+        run: yarn compile-ts
+
+      - name: 'Run tests'
+        run: yarn test
