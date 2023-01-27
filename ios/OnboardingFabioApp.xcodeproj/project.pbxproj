@@ -15,6 +15,9 @@
 		7699B88040F8A987B510C191 /* libPods-OnboardingFabioApp-OnboardingFabioAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-OnboardingFabioApp-OnboardingFabioAppTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		BCCBE944298048C80034AE99 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCCBE943298048C80034AE99 /* MaterialIcons.ttf */; };
+		BCDDDFC92982DBA5008E147D /* RNCKNativeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDDFC62982CFCA008E147D /* RNCKNativeButton.m */; };
+		BCDDDFCA2982DBA7008E147D /* RNCKNativeButtonViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDDFC82982D05A008E147D /* RNCKNativeButtonViewManager.m */; };
+		BCDDDFCE2982EF21008E147D /* RNCKNativeNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = BCDDDFCD2982EF21008E147D /* RNCKNativeNotifications.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,12 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = OnboardingFabioApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-OnboardingFabioApp-OnboardingFabioAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OnboardingFabioApp-OnboardingFabioAppTests.release.xcconfig"; path = "Target Support Files/Pods-OnboardingFabioApp-OnboardingFabioAppTests/Pods-OnboardingFabioApp-OnboardingFabioAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		BCCBE943298048C80034AE99 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		BCDDDFC52982CF8A008E147D /* RNCKNativeButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCKNativeButton.h; sourceTree = "<group>"; };
+		BCDDDFC62982CFCA008E147D /* RNCKNativeButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCKNativeButton.m; sourceTree = "<group>"; };
+		BCDDDFC72982D00E008E147D /* RNCKNativeButtonViewManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCKNativeButtonViewManager.h; sourceTree = "<group>"; };
+		BCDDDFC82982D05A008E147D /* RNCKNativeButtonViewManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCKNativeButtonViewManager.m; sourceTree = "<group>"; };
+		BCDDDFCC2982EEF0008E147D /* RNCKNativeNotifications.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCKNativeNotifications.h; sourceTree = "<group>"; };
+		BCDDDFCD2982EF21008E147D /* RNCKNativeNotifications.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCKNativeNotifications.m; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -88,7 +97,9 @@
 		13B07FAE1A68108700A75B9A /* OnboardingFabioApp */ = {
 			isa = PBXGroup;
 			children = (
-				BCCBE942298048730034AE99 /* Folder */,
+				BCDDDFCB2982EE5F008E147D /* NativeNotifications */,
+				BCDDDFC42982CEE7008E147D /* NativeButton */,
+				BCCBE942298048730034AE99 /* Icons */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -151,12 +162,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		BCCBE942298048730034AE99 /* Folder */ = {
+		BCCBE942298048730034AE99 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
 				BCCBE943298048C80034AE99 /* MaterialIcons.ttf */,
 			);
-			name = Folder;
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		BCDDDFC42982CEE7008E147D /* NativeButton */ = {
+			isa = PBXGroup;
+			children = (
+				BCDDDFC52982CF8A008E147D /* RNCKNativeButton.h */,
+				BCDDDFC62982CFCA008E147D /* RNCKNativeButton.m */,
+				BCDDDFC72982D00E008E147D /* RNCKNativeButtonViewManager.h */,
+				BCDDDFC82982D05A008E147D /* RNCKNativeButtonViewManager.m */,
+			);
+			name = NativeButton;
+			path = OnboardingFabioApp/NativeButton;
+			sourceTree = "<group>";
+		};
+		BCDDDFCB2982EE5F008E147D /* NativeNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				BCDDDFCC2982EEF0008E147D /* RNCKNativeNotifications.h */,
+				BCDDDFCD2982EF21008E147D /* RNCKNativeNotifications.m */,
+			);
+			name = NativeNotifications;
+			path = OnboardingFabioApp/NativeNotifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,8 +457,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCDDDFCE2982EF21008E147D /* RNCKNativeNotifications.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				BCDDDFC92982DBA5008E147D /* RNCKNativeButton.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				BCDDDFCA2982DBA7008E147D /* RNCKNativeButtonViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
