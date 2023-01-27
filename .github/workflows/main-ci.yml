@@ -7,7 +7,8 @@ on:
     branches: ['main']
 
 jobs:
-  build:
+  tests:
+    name: 'Tests'
     runs-on: macos-latest
 
     steps:
@@ -17,7 +18,7 @@ jobs:
       - name: 'Setup Node.js environment'
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts'
+          node-version: 'lts/*'
           cache: 'yarn'
 
       - name: 'Install dependencies'
